@@ -12,7 +12,14 @@ const UserregisterRouter = require("./App/Routes/User/userregister");
 const protectedrouter = require("./App/Routes/authRoutes");
 
 // Middlewares
-app.use(cors());  // You can customize this if needed
+const corsOption={
+  origin:[
+    "https://novelwebdashboad.onrender.com",
+    "https://novelwebfrontend.onrender.com"
+  ],
+  credentials:true,
+}
+app.use(cors(corsOption));  // You can customize this if needed
 app.use(express.json());
 
 // Use Routes
