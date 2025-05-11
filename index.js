@@ -35,7 +35,7 @@ app.get("/", (req, res) => {
 });
 
 // DB Connection + Server Start
-mongoose.connect(process.env.DB_URL || "mongodb://localhost:27017/NovelWeb")  // You can fallback to localhost if DB_URL isn't available
+mongoose.connect(process.env.DB_URL)  
   .then(() => {
     console.log("Database is connected successfully");
 
